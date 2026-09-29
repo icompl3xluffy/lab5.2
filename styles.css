@@ -36,7 +36,7 @@ h1 {
 .form-group input[type="password"] {
   width: calc(100% - 22px); /* Account for padding and border */
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 2px solid #a59292;
   border-radius: 4px;
   box-sizing: border-box; /* Makes width calculation easier */
 }
