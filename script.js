@@ -9,10 +9,14 @@ let input=document.getElementsByTagName("input")
 
 
 
+
+
 const savedUsername = localStorage.getItem('savedUsername');
         if (savedUsername) {
             user.value = savedUsername; 
         }
+
+        
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -22,11 +26,9 @@ form.addEventListener('submit', function (event) {
     } else{
         alert("Form Submitted")
     }
- 
     
-            
-            
             localStorage.setItem('savedUsername', user.value);
+        
 })
 
    if (email.validity.typeMismatch) {
