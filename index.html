@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Interactive Registration Form</title>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
     <h1>Register</h1>
-    <form id="registrationForm" novalidate>
+    <form id="registrationForm" >
       <div class="form-group">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
+        <input type="text" id="username" name="username" minlength="7" required>
         <span class="error-message" id="usernameError"></span>
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
+        <label for="email">Enter Your Email:</label>
         <input type="email" id="email" name="email" required>
         <span class="error-message" id="emailError"></span>
       </div>
       <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-        <small>Password must be at least 8 characters long, include an uppercase letter, a lowercase letter, and a number.</small>
+        <label for="password">Choose A Password:</label>
+        <input type="password" id="password" name="password" minlength="8">
+        <small>Password must be at least 6 characters long, include an uppercase letter, a lowercase letter, a number and a special character.</small>
         <span class="error-message" id="passwordError"></span>
       </div>
       <div class="form-group">
@@ -34,6 +35,5 @@
       <button type="submit">Register</button>
     </form>
   </div>
-  <script src="script.js"></script>
 </body>
 </html>
