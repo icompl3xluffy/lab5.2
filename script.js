@@ -9,18 +9,24 @@ let input=document.getElementsByTagName("input")
 
 
 
-
+const savedUsername = localStorage.getItem('savedUsername');
+        if (savedUsername) {
+            user.value = savedUsername; 
+        }
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     
-    if(user!=="" && email !==""&& password==="confirmP"){
-    alert('form submitted');
-    }else{
-        alert("ERROR: Missing fields")
-
+    if(user.value==="" || email===""|| password===""||confirmP===""){   
+        alert('Error: Empty field');
+    } else{
+        alert("Form Submitted")
     }
  
+    
+            
+            
+            localStorage.setItem('savedUsername', user.value);
 })
 
    if (email.validity.typeMismatch) {
